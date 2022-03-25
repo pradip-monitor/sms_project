@@ -1,0 +1,21 @@
+{% extends "crud/base.html" %}
+{% load static %}
+{% block main-content %}
+<div class="container">
+ <div class="row">
+ <div class="col">
+  <h2 class="text-center alert alert-info mt-2">Update student information</h2>
+
+<form action="" method="POST" class="shadow p-2" enctype="multipart/form-data">
+	{% csrf_token %}
+{{form.as_p}}
+
+<input type="submit" value="Update Student" class="btn btn-success my-2"/>
+
+<a href="{% url 'addandshow' %}" class="btn btn-info my-2">Back to home </a>
+</form>
+ </div>
+ </div>
+ </div>
+
+{% endblock main-content %}
